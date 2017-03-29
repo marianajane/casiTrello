@@ -6,27 +6,30 @@
 	</title>
 	<link rel="stylesheet" type="text/css" href="">
 </head>
-<body style= font-family:"helvetica">
+<body bgcolor="#E6E6FA" style= font-family:"helvetica">
 	<h1><strong>Trello</strong></h1>
 	<span>
 		<h3>Pendientes semana</h3>
 		<ul id="listaPendientes1">
 		</ul>
 		<p>Agregar pendiente</p>
-		<input type="textarea" id="lista1">
+		<input type="text" id="lista1" placeholder="pendiente">
 		<button type="submit" onclick="agregarL1();">Crear pendiente</button>
 	</span id="listaPendientes2">
 	<hr>
-	<span id="listaPendientes2">
+	<span>
 		<h3>Pendientes siguiente semana</h3>
-		<input type="text" name="lista2" id="lista2">
+		<ul id="listaPendientes2">
+		</ul>
+		<input type="text" id="lista2" placeholder="pendiente">
 		<button type="submit" onclick="agregarL2();">Crear pendiente</button>
 	</span>
 	<hr>
 	<span>
+		<h3 id="listaNueva"></h3>
 		<h3>Agregar lista</h3>
-		<input type="text" name="listaNueva" id="listaNueva">
-		
+		<input type="text" id="creandoNuevaLista" placeholder="Lista Nueva" >
+		<button type="submit" onclick="crearLista();">Crear lista</button>
 	</span>
 <script type="text/javascript" src="assets/js/javascript.js"></script>
 </body>

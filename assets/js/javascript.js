@@ -5,6 +5,11 @@ function agregarL1() {
     console.log (listaPendientes1);
     var laLista = "<li>" + listaPendientes1 + "</li>";
     document.getElementById("listaPendientes1").innerHTML += laLista;
+    	var boton = document.createElement("INPUT");
+    	boton.setAttribute("type", "button");
+    	boton.setAttribute("onclick", "borrarPendiente();");
+    	boton.setAttribute("value", "Borrar");
+    	document.body.appendChild(boton);
   }
 
 function agregarL2() {
@@ -20,18 +25,18 @@ function agregarL2() {
     var laLista = "<h3>" + listaNueva + "</h3>";
     document.getElementById("listaNueva").innerHTML += laLista;
     
-    var aqui = document.createElement("LI");
-    var cuadrito = document.createElement("INPUT");
+    	var aqui = document.createElement("LI");
+    	var cuadrito = document.createElement("INPUT");
     	cuadrito.setAttribute("type", "text");
     	cuadrito.setAttribute("id", "otroPendiente");
     	cuadrito.setAttribute("list", "li");
-    document.body.appendChild(cuadrito);
-    var boton = document.createElement("INPUT");
+    	document.body.appendChild(cuadrito);
+    	var boton = document.createElement("INPUT");
     	boton.setAttribute("type", "button");
     	boton.setAttribute("onclick", "agregarPendiente();");
     	boton.setAttribute("name", "Crear pendiente");
     	boton.setAttribute("value", "Crear pendiente");
-    document.body.appendChild(boton);
+    	document.body.appendChild(boton);
   }
 
 function agregarPendiente() {
@@ -41,3 +46,9 @@ function agregarPendiente() {
     document.getElementById("listaPendientesN").innerHTML += laLista;
 }
     //Me hace falta crear nueva etiquea por cada vez que se crea nueva lista
+
+function borrarPendiente() {
+    var list = document.getElementById("listaPendientes1");   // Get the <ul> element with id="myList"
+    list.removeChild(list.childNodes[0]); // Remove <ul>'s first child node (index 0)
+}
+          

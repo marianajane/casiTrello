@@ -6,30 +6,30 @@
 	</title>
 	<link rel="stylesheet" type="text/css" href="">
 </head>
-<body bgcolor="#E6E6FA" style= font-family:"helvetica">
+<body bgcolor="#01DFD7" color="white" style="color:white ; font-family:helvetica">
 	<h1><strong>Trello</strong></h1>
 	<span>
 		<h3>Pendientes semana</h3>
-		<ul id="listaPendientes1">
-		</ul>
-		<p>Agregar pendiente</p>
+		<ul id="listaPendientes1"></ul>
+		<p style="color:white ; font-family:monospace;">Agregar pendiente</p>
 		<input type="text" id="lista1" placeholder="pendiente">
 		<button type="submit" onclick="agregarL1();">Crear pendiente</button>
 	</span id="listaPendientes2">
 	<hr>
 	<span>
 		<h3>Pendientes siguiente semana</h3>
-		<ul id="listaPendientes2">
-		</ul>
+		<ul id="listaPendientes2"></ul>
+		<p style="color:white ; font-family:monospace;">Agregar pendiente</p>
 		<input type="text" id="lista2" placeholder="pendiente">
 		<button type="submit" onclick="agregarL2();">Crear pendiente</button>
 	</span>
 	<hr>
 	<span>
 		<h3 id="listaNueva"></h3>
-		<h3>Agregar lista</h3>
+		<ul id="listaPendientesN"></ul>
+		<h4>Agregar lista</h4>
 		<input type="text" id="creandoNuevaLista" placeholder="Lista Nueva" >
-		<button type="submit" onclick="crearLista();">Crear lista</button>
+		<button type="submit" onclick="crearLista();">Crear lista</button><br>
 	</span>
 <script type="text/javascript" src="assets/js/javascript.js"></script>
 </body>

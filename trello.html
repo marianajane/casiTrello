@@ -2,37 +2,50 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>
-	</title>
-	<link rel="stylesheet" type="text/css" href="">
+	<title>Trello Beta</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
-<body background="fondo.jpg" color="white" style="color:white ; font-family:helvetica">
-	<img src="trello.png" align="left"><blockquote><font size="12"><strong>Trello</strong></font></blockquote>
-	<hr width="200" color="blue" align="left">
-	<span>
-		<h3>Pendientes semana</h3>
-		<ul id="listaPendientes1"></ul>
-		<p style="color:white ; font-family:monospace;">Agregar pendiente</p>
-		<input type="text" id="lista1" placeholder="pendiente">
-		<button type="submit" onclick="agregarL1();">Crear pendiente</button>
-	</span id="listaPendientes2">
-	<hr color="blue">
-	<span>
-		<h3>Pendientes siguiente semana</h3>
-		<ul id="listaPendientes2"></ul>
-		<p style="color:white ; font-family:monospace;">Agregar pendiente</p>
-		<input type="text" id="lista2" placeholder="pendiente">
-		<button type="submit" onclick="agregarL2();">Crear pendiente</button>
-	</span>
-	<hr color="blue">
-	<span>
-		<h3 id="listaNueva"></h3>
-		<ul id="listaPendientesN"></ul>
-		<h2>Agregar lista</h2>
-		<input type="text" id="creandoNuevaLista" placeholder="Lista Nueva" >
-		<button type="submit" onclick="crearLista();">Crear lista</button><br>
-		<br>
-	</span>
-<script type="text/javascript" src="assets/js/javascript.js"></script>
+<body>
+	<section class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="inline">
+			<img src="assets/img/trello.png">
+			<h1 class="padding"><strong>Trello</strong></h1>
+		</div>
+		<hr>
+		<div id="contenedor">
+			<article id="muestra">
+				<button class="btn" id="borrarLista" value="muestra" onclick="borrarTodo(this.value);">Borrar Lista</button>
+				<h1>Lista de Muestra</h1>
+				<ul id="bodd2">
+					<li id="li1">
+						<span>Comprar boletos</span>
+						<button class="btn" value="li1" ulId="bodd2" onclick="borrarPendiente(this.value, this.ulId);">X</button>
+					</li>
+					<li id="li2">
+						<span>Pagar colegiatura</span>
+						<button class="btn" value="li2" ulId="bodd2" onclick="borrarPendiente(this.value);">X</button>
+					</li>
+				</ul>
+				<hr>
+				<div id="pendientes">
+					<h3>Agregar Pendiente</h3>
+					<input id="bodd" type="text" placeholder="Entregar informe" >
+					<button class="btn" value="bodd" onclick="crearPendiente(this.value);">Agregar</button>
+				</div>
+			</article>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="text-info">Agregar Lista</h2>
+				<input id="creandoLista" type="text" placeholder="Útiles escolares">
+				<button class="btn" id="botonCrearLista" onclick="crearLista();">Crear Lista</button>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript" src="assets/js/javascript.js"></script>
 </body>
 </html>

@@ -1,0 +1,17 @@
+
+
+.inline {
+	margin-top: 4vh;
+}
+
+.inline img {
+	display: inline;
+}
+
+.inline h1 {
+	display: inline;
+}
+
+.padding {
+	padding: 2vh;
+}
